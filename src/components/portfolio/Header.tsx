@@ -145,7 +145,7 @@ export function Header() {
               <div className="relative">
                 <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl group-hover:scale-105 transition-transform duration-500">
                   <img
-                    src="/Portfolio/assets/Main_Avatar.png"
+                    src="/Portfolio/assets/Main.png"
                     alt="Mohanad Hmaid"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
