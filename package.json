@@ -1,7 +1,8 @@
 {
-  "name": "fusion-starter",
+ "name": "fusion-starter",
   "private": true,
   "type": "module",
+  "homepage": "https://mohanadhmaid.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,8 +11,7 @@
     "typecheck": "tsc",
     "start": "npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "homepage": "https://mohanadhmaid.github.io"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
