@@ -62,10 +62,11 @@ export function Navbar() {
     setIsDark(!isDark);
   };
 
-   const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const navbarHeight = 80; // Approximate navbar height
+      const navbar = document.querySelector("nav");
+      const navbarHeight = navbar ? navbar.offsetHeight : 80;
       const elementPosition = element.offsetTop - navbarHeight;
       window.scrollTo({
         top: elementPosition,
@@ -87,11 +88,10 @@ export function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled
-            ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-sm"
-            : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
+          ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-sm"
+          : "bg-transparent"
+          }`}
       >
         <div className="container-max section-padding">
           <div className="flex items-center justify-between h-16 lg:h-20">
@@ -109,11 +109,10 @@ export function Navbar() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`relative px-3 py-2 text-sm font-medium transition-colors duration-300 ${
-                    activeSection === item.id
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
+                  className={`relative px-3 py-2 text-sm font-medium transition-colors duration-300 ${activeSection === item.id
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                    }`}
                 >
                   {item.label}
                   {activeSection === item.id && (
@@ -202,10 +201,10 @@ export function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full right-0 mt-2 lg:hidden bg-background/95 backdrop-blur-lg border border-border rounded-lg shadow-lg min-w-max z-50"
+                      className="absolute top-full right-0 mt-2 lg:hidden bg-background/95 backdrop-blur-lg border border-border rounded-lg shadow-lg w-screen max-w-[calc(100vw-2rem)] sm:max-w-sm z-50"
                     >
                       <div className="p-4">
-                        <div className="flex flex-wrap gap-2 max-w-sm">
+                        <div className="flex flex-wrap gap-2">
                           {navItems.map((item, index) => (
                             <motion.button
                               key={item.id}
@@ -213,11 +212,10 @@ export function Navbar() {
                               animate={{ opacity: 1, scale: 1 }}
                               transition={{ delay: index * 0.05 }}
                               onClick={() => scrollToSection(item.id)}
-                              className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap ${
-                                activeSection === item.id
+                              className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap ${activeSection === item.id
                                   ? "text-primary bg-primary/10 border border-primary/20"
                                   : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                              }`}
+                                }`}
                             >
                               {item.label}
                             </motion.button>

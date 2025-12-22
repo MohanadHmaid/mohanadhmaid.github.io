@@ -56,7 +56,7 @@ export function About() {
             <div className="relative mb-8">
               <div className="w-64 h-64 rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/Portfolio/assets/About.jpg"
+                  src="https://i.postimg.cc/q7PkHhsH/About.jpg"
                   alt="Mohanad Hmaid"
                   className="w-full h-full object-cover"
                 />
