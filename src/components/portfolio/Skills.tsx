@@ -11,36 +11,36 @@ interface skill {
 
 const skills: skill[] = [
   {
-    name: "Frontend Development",
+    name: "Backend Development",
     level: 95,
     color: "from-primary to-accent",
   },
   {
-    name: "Backend Development",
+    name: "Database Design",
     level: 90,
     color: "from-accent to-secondary",
   },
   {
-    name: "Database Design",
+    name: "API Development",
     level: 85,
     color: "from-secondary to-primary",
   },
-  { name: "DevOps & Cloud", level: 80, color: "from-primary to-secondary" },
+  { name: "Authentication & Security", level: 80, color: "from-primary to-secondary" },
 ];
 
 const technologies = [
-  "React",
-  "Next.js",
+  "JavaScript",
   "TypeScript",
+  "Next.js",
   "Node.js",
-  "Python",
-  "PostgreSQL",
+  "Express.js",
+  "REST APIs",
+  "JWT Authentication",
   "MongoDB",
-  "AWS",
+  "MySQL",
+  "Prisma ORM",
   "Docker",
-  "GraphQL",
-  "Redux",
-  "Tailwind CSS",
+  "Git"
 ];
 
 export function Skills() {
@@ -127,10 +127,10 @@ export function Skills() {
               </h3>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I specialize in full-stack development with a focus on creating
+                I specialize in backend development with a focus on creating
                 scalable, performant, and user-friendly applications. My
-                expertise spans across frontend frameworks, backend
-                architectures, and cloud technologies.
+                expertise spans across backend frameworks, database
+                design, and cloud technologies.
               </p>
 
               <div className="space-y-4">

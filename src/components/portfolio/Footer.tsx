@@ -71,7 +71,7 @@ export function Footer() {
               <h3 className="text-xl font-bold gradient-text">Mohanad Hmaid</h3>
             </div>
             <p className="text-muted-foreground max-w-md leading-relaxed">
-              Full Stack Developer passionate about creating exceptional digital
+              Backend Developer passionate about creating exceptional digital
               experiences. Building the future, one line of code at a time.
             </p>
             <div className="flex items-center gap-4">
@@ -114,10 +114,10 @@ export function Footer() {
             <h4 className="font-semibold">Services</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>Web Development</li>
-              <li>Mobile Apps</li>
               <li>API Development</li>
-              <li>UI/UX Design</li>
-              <li>Consulting</li>
+              <li>Database Design</li>
+              <li>Performance Optimization</li>
+              <li>Authentication & Authorization</li>
             </ul>
           </div>
         </div>

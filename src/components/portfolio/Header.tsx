@@ -15,7 +15,7 @@ export function Header() {
     });
 
   const { displayText: titleText } = useTypingAnimation({
-    text: "Full Stack Developer",
+    text: "Backend Developer",
     speed: 80,
     delay: nameComplete ? 800 : 0,
   });
@@ -157,7 +157,7 @@ export function Header() {
                   transition={{ duration: 3, repeat: Infinity }}
                   className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-lg"
                 >
-                  💻 Frontend
+                  💻 Web Development
                 </motion.div>
 
                 <motion.div

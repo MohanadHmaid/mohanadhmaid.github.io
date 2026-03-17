@@ -8,24 +8,24 @@ export function About() {
   const handleDownloadResume = () => {
     // Create a sample PDF download
     fetch("/assets/resume.pdf")
-    .then(response => {
-      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-      return response.blob();
-    })
-    .then(blob => {
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "Mohanad_Hmaid_Resume.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-    })
-    .catch(error => {
-      console.error("Error downloading resume:", error);
-      window.location.href = "/assets/resume.pdf";
-    });
+      .then(response => {
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        return response.blob();
+      })
+      .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "Mohanad_Hmaid_Resume.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      })
+      .catch(error => {
+        console.error("Error downloading resume:", error);
+        window.location.href = "/assets/resume.pdf";
+      });
   };
 
   return (
@@ -97,18 +97,16 @@ export function About() {
           >
             <div className="prose prose-lg dark:prose-invert max-w-none">
               <p className="text-lg leading-relaxed">
-                Hello! I'm Mohanad, a passionate full-stack developer with a
+                Hello! I'm Mohanad, a passionate backend developer with a
                 love for creating innovative digital solutions. I specialize in
                 building scalable web applications using modern technologies and
                 best practices.
               </p>
 
               <p className="text-lg leading-relaxed">
-                With a strong foundation in both frontend and backend
-                development, I enjoy tackling complex problems and turning ideas
-                into reality. My goal is to create user-centric applications
-                that not only look great but also provide exceptional user
-                experiences.
+                With a strong foundation in backend development, I enjoy tackling complex problems
+                and turning ideas into reality. My goal is to create user-centric applications
+                that not only look great but also provide exceptional user experiences.
               </p>
 
               <p className="text-lg leading-relaxed">
@@ -123,7 +121,7 @@ export function About() {
                 whileHover={{ scale: 1.05 }}
                 className="bg-card border border-border rounded-lg p-4 text-center"
               >
-                <h3 className="text-2xl font-bold text-primary mb-1">5+</h3>
+                <h3 className="text-2xl font-bold text-primary mb-1">1+</h3>
                 <p className="text-sm text-muted-foreground">
                   Years Experience
                 </p>
@@ -133,7 +131,7 @@ export function About() {
                 whileHover={{ scale: 1.05 }}
                 className="bg-card border border-border rounded-lg p-4 text-center"
               >
-                <h3 className="text-2xl font-bold text-primary mb-1">50+</h3>
+                <h3 className="text-2xl font-bold text-primary mb-1">5+</h3>
                 <p className="text-sm text-muted-foreground">
                   Projects Completed
                 </p>
@@ -143,7 +141,7 @@ export function About() {
                 whileHover={{ scale: 1.05 }}
                 className="bg-card border border-border rounded-lg p-4 text-center"
               >
-                <h3 className="text-2xl font-bold text-primary mb-1">20+</h3>
+                <h3 className="text-2xl font-bold text-primary mb-1">3+</h3>
                 <p className="text-sm text-muted-foreground">Happy Clients</p>
               </motion.div>
 
